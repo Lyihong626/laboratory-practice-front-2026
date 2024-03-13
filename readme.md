@@ -9,7 +9,8 @@
 yarn install 或 npm install 安装依赖
 yarn dev 或 npm run dev 开始开发
 
-#开发流程
+# 开发流程
+
 每次开发时，首先拉取最新 dev 分支，其中[remote]为远程分支名
 
 git pull [remote] dev
@@ -17,7 +18,8 @@ git pull [remote] dev
 
 完成开发后，提交并 push 对应分支
 
-#提交规范
+# 提交规范
+
 commit 时，git 会自动调用 hook 进行代码检查，检查代码是否规范，提交指令是否规范。
 
 git commit -m "[type]: 提交说明"
