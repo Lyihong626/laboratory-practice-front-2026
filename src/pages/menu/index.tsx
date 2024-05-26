@@ -40,7 +40,7 @@ type SubMenuItem = {
 
 const menuItems: MenuItem[] = [
   {
-    text: '量表管理',
+    text: '量表管理（参考）',
     icon: <Assessment />,
     submenus: [
       { text: '量表基本信息', component: <BaseInformation /> },
@@ -48,7 +48,7 @@ const menuItems: MenuItem[] = [
     auth: ['ADMIN', 'DIRECTIOR', 'DOCTOR'],
   },
   {
-    text: '基础设置',
+    text: '基础设置（练习）',
     icon: <Settings />,
     submenus: [
       { text: '用户管理', component: <div>用户管理</div> },
@@ -130,7 +130,7 @@ export const Sidebar: React.FC = () => {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: '#1ca49c' }}>
+      <AppBar position="static" sx={{ backgroundColor: 'green' }}>
         <Toolbar>
           <Box
             sx={{
@@ -218,7 +218,8 @@ export const Sidebar: React.FC = () => {
             },
           }}
         >
-          <Toolbar sx={{ backgroundColor: '#1ca49c', color: 'white' }}>
+          <Toolbar sx={{ backgroundColor: 'green', color: 'white', justifyContent: 'center' }}>
+            培训练习框架
           </Toolbar>
           <List>
             {menuItems.map((item, index) => {
