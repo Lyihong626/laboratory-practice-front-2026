@@ -51,7 +51,6 @@ const refreshAuthToken = async () => {
       localStorage.setItem('refreshToken', '');
       localStorage.setItem('role', '');
       localStorage.setItem('username', '');
-      window.location.href = '/login';
     } else {
       // 如果refreshtoken没过期
       // 查询 refreshToken
@@ -89,7 +88,6 @@ const errorLink = new ApolloLink((operation, forward) => {
       if (refreshToken === '') {
         localStorage.setItem('role', '');
         localStorage.setItem('username', '');
-        window.location.href = '/login';
         return response;
       }
       // 如果 refreshToken 存在，则刷新 token 并重试
@@ -123,7 +121,6 @@ const refresh = async () => {
       localStorage.setItem('refreshToken', '');
       localStorage.setItem('role', '');
       localStorage.setItem('username', '');
-      window.location.href = '/login';
     }
 
     const query = print(RefreshToken);

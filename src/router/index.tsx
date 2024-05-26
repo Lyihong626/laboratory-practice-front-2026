@@ -3,7 +3,6 @@ import { Suspense, useCallback } from 'react';
 import type { RouteObject } from 'react-router-dom';
 import { Navigate, useRoutes } from 'react-router-dom';
 
-import Login from '@/pages/login';
 import { Sidebar } from '@/pages/menu';
 
 import type { routerConfigType } from './routerConfigType';
@@ -16,7 +15,7 @@ const routeConfig: routerConfigType[] = [
       {
         path: '',
         auth: ['', 'USER', 'ADMIN', 'DIRECTIOR', 'DOCTOR'],
-        element: <Navigate to="login" replace />,
+        element: <Navigate to="index" replace />,
       },
       {
         path: 'info',
@@ -41,14 +40,6 @@ const routeConfig: routerConfigType[] = [
   {
     path: '404',
     element: <div>路径错误,用户未登录或用户权限不够</div>,
-  },
-  {
-    path: 'login',
-    element: (
-      <Suspense fallback={<CircularProgress size="40" />}>
-        <Login />
-      </Suspense>
-    ),
   },
 ];
 
